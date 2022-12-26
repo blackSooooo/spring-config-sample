@@ -2,12 +2,11 @@ server:
   port: 8888
 
 spring:
-  application:
-    name: config-server
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/blackSooooo/spring-config-server-sample
-          search-paths: config/**
+          uri: https://github.com/blackSooooo/spring-config-server-sample.git
+          search-paths: /config/
           default-label: master
+          clone-on-start: true
